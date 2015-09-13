@@ -81,3 +81,4 @@ Once those attributes have been set, you can make user-authorized API calls.  Fo
 7
 ```
 
+Once authorized, you should not store the user's password (per the Phish.net terms).  
