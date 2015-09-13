@@ -88,7 +88,7 @@ class PhishNetAPI(object):
             'passwd': password
         }
         response = self.post(params=params)
-        if not response.get('success'):
+        if not str(response.get('success')) == '1':
             raise AuthError("Auth attempt unsuccessful.")
         else:
             return response['authkey']
@@ -100,18 +100,16 @@ class PhishNetAPI(object):
             'username': username,
         }
         response = self.get(params=params)
-        return response.get('success') == True
+        return str(response.get('success')) == '1'
 
     @check_api_key
     def authkey_get(self, username):
-        if not self.api_key:
-            raise AuthError("Authorization key get made without API key")
         params = {
             'method': 'pnet.api.authkey.get',
             'username': username,
         }
         response = self.get(params=params)
-        if response.get('success'):
+        if str(response.get('success')) == '1':
             return response['authkey']
         else:
             return False
