@@ -1,9 +1,8 @@
-__author__ = 'jerrico'
-
 #!/usr/bin/env python
 
 from distutils.core import setup
-from phishnetpy import VERSION
+
+VERSION = '0.1.0'
 
 setup(name='phishnetpy',
       version=VERSION,
