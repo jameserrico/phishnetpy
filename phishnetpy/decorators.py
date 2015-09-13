@@ -6,7 +6,7 @@ def qual_name_safe(f):
     try:
         return f.__qualname__
     except AttributeError:  # Occurs when pyhon <= 3.3
-        import qualname
+        from qualname import qualname
         return qualname(f)
 
 
