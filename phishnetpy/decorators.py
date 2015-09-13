@@ -5,7 +5,7 @@ from phishnetpy.exceptions import AuthError
 def qual_name_safe(f):
     try:
         return f.__qualname__
-    except AttributeError:  # Occurs when pyhon <= 3.3
+    except AttributeError:  # Occurs when Python <= 3.3
         from qualname import qualname
         return qualname(f)
 
