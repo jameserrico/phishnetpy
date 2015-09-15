@@ -10,7 +10,7 @@ You guessed it...
 
 ```
 pip install phishnetpy
-```
+``
 
 # Getting Started
 

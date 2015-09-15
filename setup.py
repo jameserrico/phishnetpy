@@ -1,8 +1,14 @@
 #!/usr/bin/env python
 
 from distutils.core import setup
+from pip.req import parse_requirements
+from pip.download import PipSession
 
-VERSION = '0.1.4'
+VERSION = '0.1.6'
+
+install_reqs = parse_requirements('requirements.txt', session=PipSession())
+reqs = [str(ir.req) for ir in install_reqs]
+
 
 setup(name='phishnetpy',
       version=VERSION,
@@ -10,7 +16,8 @@ setup(name='phishnetpy',
       author='James Errico',
       author_email='james.errico@gmail.com',
       url='https://github.com/jameserrico/phishnetpy',
-      py_modules=['phishnetpy.phishnet_api', 'phishnetpy.decorators', 'phishnetpy.exceptions'],
+      packages=['phishnetpy'],
+      install_requires=reqs,
       license='MIT',
       classifiers=[
           'Development Status :: 4 - Beta',
