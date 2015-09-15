@@ -4,6 +4,14 @@
 
 phishnetpy is a Python client for the [Phish.net API](http://api.phish.net).  It works with either Python 2 or 3 and supports all of the endpoints provided by api.phish.net.
 
+# Installation
+
+You guessed it...
+
+```
+pip install phishnetpy
+```
+
 # Getting Started
 
 As you browse the [Phish.net API documentation](http://api.phish.net/docu/) you will see that some API methods are labeled as "protected".  This means that in order to use those methods, you must generate an Application Key.  To allow both public and protected usage, there are several setup steps you have to complete.
