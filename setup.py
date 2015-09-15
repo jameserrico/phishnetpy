@@ -2,7 +2,7 @@
 
 from distutils.core import setup
 
-VERSION = '0.1.2'
+VERSION = '0.1.4'
 
 setup(name='phishnetpy',
       version=VERSION,
@@ -10,7 +10,7 @@ setup(name='phishnetpy',
       author='James Errico',
       author_email='james.errico@gmail.com',
       url='https://github.com/jameserrico/phishnetpy',
-      py_modules=['phisnetpy'],
+      py_modules=['phishnetpy.phishnet_api', 'phishnetpy.decorators', 'phishnetpy.exceptions'],
       license='MIT',
       classifiers=[
           'Development Status :: 4 - Beta',
