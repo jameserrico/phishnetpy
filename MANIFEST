@@ -6,4 +6,3 @@ phishnetpy/__init__.py
 phishnetpy/decorators.py
 phishnetpy/exceptions.py
 phishnetpy/phishnet_api.py
-tests/__init__.py
