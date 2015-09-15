@@ -4,7 +4,7 @@ from distutils.core import setup
 from pip.req import parse_requirements
 from pip.download import PipSession
 
-VERSION = '0.1.6'
+VERSION = '0.1.7'
 
 install_reqs = parse_requirements('requirements.txt', session=PipSession())
 reqs = [str(ir.req) for ir in install_reqs]
